@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.coder4.sbmvt.ratelimit.aspect.RateLimitConfiguration
+com.coder4.lmsia.ratelimit.aspect.RateLimitConfiguration
