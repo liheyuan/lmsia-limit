@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+
+// Java 8
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// Use as maven groupId/artifactId/version
+group = 'com.coder4.lmsia'
+project.archivesBaseName = 'ratelimit'
+project.version = '0.0.1'
+
+// source & javadoc pom
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+artifacts {
+    archives sourcesJar
+}
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compileOnly 'org.springframework.boot:spring-boot-starter-aop:1.5.6.RELEASE'
+    compileOnly 'com.google.guava:guava:26.0-jre'
+    compileOnly 'ch.qos.logback:logback-classic:1.2.3'
+    compileOnly 'com.github.liheyuan:lmsia-commons-http:0.0.7'
+
+    // Use JUnit test framework
+    testCompile 'junit:junit:4.12'
+}
+
