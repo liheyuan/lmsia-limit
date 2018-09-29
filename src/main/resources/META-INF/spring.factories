@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.coder4.sbmvt.ratelimit.MethodParamRateLimitAspect \
+com.coder4.sbmvt.ratelimit.MethodRateLimitAspect
