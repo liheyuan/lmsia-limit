@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Configuration;
  * @author coder4
  */
 @Configuration
-@ComponentScan("com.coder4.sbmvt.ratelimit.aspect")
+@ComponentScan("com.coder4.lmsia.ratelimit.aspect")
 public class RateLimitConfiguration {
 }
